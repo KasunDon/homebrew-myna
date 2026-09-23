@@ -16,7 +16,7 @@ cask "myna" do
 
   # The app also self-updates in place; Homebrew just installs and (via `brew upgrade`) replaces it.
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "myna.app"
 
