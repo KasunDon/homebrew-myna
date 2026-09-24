@@ -1,6 +1,6 @@
 cask "myna" do
   version "0.1.3"
-  sha256 arm:   "fe21a5a7e39dc8c1fffde43e2d22ef5105830ace303774587f640f63496ceb97",
+  sha256 arm:   "759b1e69e3f8e0f261b9cf752340a430b57a1bfe7d08dcb7d0809d226f6ac713",
          intel: "0000000000000000000000000000000000000000000000000000000000000000"
 
   # The download API serves a versioned 302 to a short-lived presigned artifact URL; Homebrew follows it.
