@@ -8,8 +8,7 @@ cask "myna" do
   # NOTE: this is the raw API-gateway download endpoint. A production cask should front it with a branded,
   # stable URL (a CloudFront /downloads/* behaviour on ktk.tools.ktek.cloud → this origin).
   arch arm: "darwin-arm64", intel: "darwin-x64"
-  url "https://91iar0i6uj.execute-api.us-east-1.amazonaws.com/downloads/myna-#{arch}/#{version}",
-      verified: "91iar0i6uj.execute-api.us-east-1.amazonaws.com/"
+  url "https://91iar0i6uj.execute-api.us-east-1.amazonaws.com/downloads/myna-#{arch}/#{version}"
   name "myna"
   desc "AI coding editor — a Code-OSS fork with codemyna built in"
   homepage "https://ktk.tools.ktek.cloud/"
