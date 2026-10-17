@@ -14,9 +14,14 @@ cask "myna" do
   desc "AI coding editor — a Code-OSS fork with codemyna built in"
   homepage "https://ktk.tools.ktek.cloud/"
 
-  # The app also self-updates in place; Homebrew just installs and (via `brew upgrade`) replaces it.
-  auto_updates true
+  # No `auto_updates true` yet: builds are ad-hoc signed, and Squirrel.Mac refuses to apply an update to an
+  # app without a Developer ID signature, so Homebrew is the only update path. With `auto_updates true` a
+  # plain `brew upgrade` skips this cask (it needs --greedy), which would leave installs on an old build.
+  # Restore it once signed builds ship (docs/myna-signing.md in ktk-ai).
   depends_on macos: :big_sur
+  # Only the arm64 build is published; the intel sha256 above is a placeholder and its download is a 404.
+  # Refusing on Intel up front beats a checksum failure halfway through `brew install`.
+  depends_on arch: :arm64
 
   app "myna.app"
 
