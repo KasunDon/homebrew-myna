@@ -18,15 +18,11 @@ If Homebrew refuses to load the cask ("untrusted tap"), accept the prompt or run
 brew trust --cask KasunDon/myna/myna
 ```
 
-### First launch (unsigned build)
+### First launch
 
-myna isn't code-signed/notarized yet, so macOS Gatekeeper may block the first launch.
-Clear the quarantine flag once, then open normally:
-
-```sh
-xattr -dr com.apple.quarantine /Applications/myna.app
-open -a myna
-```
+Signed and notarized with Developer ID Application `Kasun Paranagamage Don (F5Q59PPGF5)`,
+so macOS opens it without a Gatekeeper prompt. If you installed an earlier ad-hoc build,
+one `brew upgrade --cask myna` moves you onto the signed stream.
 
 ### The `myna` command
 

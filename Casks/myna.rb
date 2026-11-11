@@ -35,9 +35,9 @@ cask "myna" do
   ]
 
   caveats <<~EOS
-    Until myna ships notarized builds, macOS Gatekeeper may block the first launch.
-    If it does, open it once with:  xattr -dr com.apple.quarantine "#{appdir}/myna.app"
-    then launch normally. (This is standard for un-notarized apps; it is not a workaround
-    for any security control on a machine you do not own.)
+    Signed + notarized (Developer ID Application: Kasun Paranagamage Don, F5Q59PPGF5).
+    First launch opens without a Gatekeeper prompt. Future updates install in-place via
+    the built-in updater; if you installed an earlier ad-hoc build, run
+    `brew upgrade --cask myna` once to move onto the signed stream.
   EOS
 end
